@@ -1,0 +1,11 @@
+.progressbar {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+progress{
+    margin-top: 25px;
+    width: 100%;
+    height: 50px;
+}

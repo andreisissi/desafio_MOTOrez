@@ -1,0 +1,45 @@
+.btn_filter {
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 40px;
+}
+
+.finish_btn:hover, .pending_btn:hover {
+    background-color: rgba(200, 204, 197, 0.645);
+    transition: .5s ease-in-out;
+}
+
+
+.finish_btn, .pending_btn {
+    width: 150px;
+    border-radius: 20px;
+    border: solid 1px gray;
+    height: 40px;
+    cursor: pointer;
+    background-color: white;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.search {
+    width: 250px;
+    border-radius: 20px;
+    border: solid 1px gray;
+    margin-left: 50px;
+    text-align: left;
+    padding-left: 30px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btn_filter button {
+   display: flex;
+   align-items: center;
+}
+
+.btn_filter button img {
+    margin-left: 30px;
+    margin-right: 5px;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles-css/style.css">
+    <link rel="stylesheet" href="styles-css/config-data.css">
+    <link rel="stylesheet" href="styles-css/progress-barr.css">
+    <link rel="stylesheet" href="styles-css/btn-filter.css">
+    <link rel="stylesheet" href="styles-css/input-btn-task.css">
+    <link rel="stylesheet" href="styles-css/task-list.css">
+
+    <script type="text/Javascript" src="main.js" defer></script>
+    <title>ToDo List</title>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- CONFIGURAÇÃO DA DATA -->
+
+        <div class="date">
+            <div class="date-year">
+                <p data_date>data</p>
+                <p class="year" data_year>ano</p>
+            </div>
+            <p class="week" data_week>semana</p>
+        </div>
+
+        <!-- CONFIGURAÇÃO DA BARRA DE PROGRESSO -->
+
+            <div class="progressbar">
+                <progress max="100" value="40" 40%></progress>
+            </div>
+
+        <!-- CONFIGURAÇÃO DOS BOTÕES DE FILTROS -->
+
+            <div class="btn_filter">
+                <button class="finish_btn"><img src="img/checked.png" alt="">Realizadas</button>
+                <button class="pending_btn"><img src="img/relogio.png" alt="">Pendentes</button>
+                <input class="search" type="text" placeholder="Buscar" onkeyup="filterByName()">
+            </div>
+
+        <!-- CONFIGURAÇÃO DO INPUT E BOTÃO DE ADD TAREFAS -->
+
+            <div class="container_btn_input">
+                <input placeholder="adicionar tarefa" maxlength="60" autofocus class="input_message">
+                <button class="btn_add_task"><img src="img/adicao.png" alt=""></button>
+            </div>
+
+            <div class="container_ul_li">
+                <ul class="ul_list">
+                    <!-- <li>
+                        <img src="" alt="">
+                        <p></p>
+                        <img src="" alt="">
+                    </li> -->
+                </ul>
+            </div>
+    </div>
+    
+</body>
+</html>

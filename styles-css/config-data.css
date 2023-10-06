@@ -1,0 +1,12 @@
+.date {
+    display: flex;
+    justify-content: space-between;
+}
+
+.year {
+    font-size: 20px;
+}
+
+.week {
+    margin-top: 10px;
+}
