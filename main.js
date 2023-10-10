@@ -12,7 +12,7 @@ let year = dt.getFullYear();
 
 
 let arrayMonth = new Array('Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro');
-let arrayWeek = new Array('Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira');
+let arrayWeek = new Array('Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado');
 
 element.data_date.innerHTML = `${day} de ${arrayMonth[month]}`
 element.data_year.innerHTML = year;

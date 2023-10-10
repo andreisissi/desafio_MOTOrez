@@ -1,0 +1,64 @@
+@media screen and (max-width: 1781px) {
+    
+    .search {
+        height: 40px;
+        width: 100%;
+        margin: 15px 0 0;
+    }
+
+    .container {
+        width: 40%;
+        margin-top: 10rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+@media screen and (max-width: 1360px) {
+    
+    .date {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .container {
+        width: 60%;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width: 830px) {
+    
+    .date {
+        display: flex;
+        justify-content: space-between;
+        font-size: 20px;
+    }
+
+    .container {
+        width: 80%;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    
+    .date {
+        display: flex;
+        justify-content: space-between;
+        font-size: 20px;
+    }
+
+    .container {
+        width: 100%;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+}

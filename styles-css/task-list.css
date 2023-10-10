@@ -31,4 +31,5 @@
 .done {
     background-color: rgba(192, 194, 189, 0.143);
     text-decoration: line-through;
+    font-style: italic;
 }

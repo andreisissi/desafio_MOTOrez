@@ -3,30 +3,28 @@
     padding: 0;
     box-sizing: border-box;
     list-style: none;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body {
     display: flex;
-    justify-content: center;
     background-size: cover;
     background-image: url(/img/fundo.jpg);
-    color: black;
     font-size: 30px;
     outline: none;
-    font-family: 'Montserrat', sans-serif;
 }
 
 .container {
     background-color: white;
     width: 40%;
     border-radius: 5px;
-    padding: 50px;
-    margin: 200px auto 0;
-    margin-right: 500px;
+    padding: 3rem;
+    margin-top: 10rem;
+    margin-left: auto;
+    margin-right: auto;
     box-shadow: 2px 2px 8px 2px gray ;
 }
 
 img {
     width: 18px;
 }
-
