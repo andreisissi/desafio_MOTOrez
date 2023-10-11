@@ -26,10 +26,10 @@
 
         <div class="date">
             <div class="date-year">
-                <p data_date>data</p>
-                <p class="year" data_year>ano</p>
+                <p data_date="day_month">data e mes</p>
+                <p class="year" data_date="year">ano</p>
             </div>
-            <p class="week" data_week>semana</p>
+            <p class="week" data_date="week">semana</p>
         </div>
 
         <!-- CONFIGURAÇÃO DA BARRA DE PROGRESSO -->
@@ -43,24 +43,38 @@
             <div class="btn_filter">
                 <button class="finish_btn"><img src="img/checked.png" alt="">Realizadas</button>
                 <button class="pending_btn"><img src="img/relogio.png" alt="">Pendentes</button>
-                <input class="search" type="text" placeholder="Buscar" onkeyup="filterByName()">
+                <input class="search" type="text" placeholder="Buscar">
             </div>
 
         <!-- CONFIGURAÇÃO DO INPUT E BOTÃO DE ADD TAREFAS -->
+            
+            <form class="container_btn_input" todo_form>
+                <input placeholder="adicionar tarefa" maxlength="60" autofocus class="input_message" todo_input>
+                <button class="btn_add_task" title="Adicionar tarefa"><img src="img/adicao.png" alt=""></button>
+            </form>
 
-            <div class="container_btn_input">
-                <input placeholder="adicionar tarefa" maxlength="60" autofocus class="input_message">
-                <button class="btn_add_task"><img src="img/adicao.png" alt=""></button>
-            </div>
+            <div id="todo_list" todo_list>
 
-            <div class="container_ul_li">
-                <ul class="ul_list">
-                    <!-- <li>
-                        <img src="" alt="">
-                        <p></p>
-                        <img src="" alt="">
-                    </li> -->
-                </ul>
+                <!-- <div class="todo done">
+                    <h3>Estou fazendo alguma coisa...</h3>
+                    <button class="finish_todo"><img src="img/checked.png" alt="">
+                    </button>
+                    <button class="edit_todo"><img src="img/lapis.png" alt="">
+                    </button>
+                    <button class="remove_todo"><img src="img/lixeira.png" alt="">
+                    </button>
+                </div>
+    
+                <div class="todo">
+                    <h3>Estudar JavaCript</h3>
+                    <button class="finish_todo"><img src="img/checked.png" alt="">
+                    </button>
+                    <button class="edit_todo"><img src="img/lapis.png" alt="">
+                    </button>
+                    <button class="remove_todo"><img src="img/lixeira.png" alt="">
+                    </button>
+                </div> -->
+    
             </div>
     </div>
     
