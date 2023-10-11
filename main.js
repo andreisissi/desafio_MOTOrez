@@ -7,8 +7,10 @@ const element = {
   data_cancel_edit : document.querySelector('[data_cancel_edit]'),
   edit_form: document.querySelector('[edit_form]'),
   edit_input: document.querySelector('[edit_input]'),
+  data_search_input: document.querySelector('[data_search_input]'),
+  erase_btn: document.querySelector('[erase_btn]'),
 }
-console.log(element.todo_form)
+// console.log(element.erase_btn)
 
 let progress = 0;
 let oldInputValue;
@@ -145,6 +147,21 @@ systemDate()
     })
   }
 
+  function getSearchTodos (search) {
+    const todos = document.querySelectorAll('[data_todo]')
+
+    todos.forEach((item) => {
+      let todoTitle = item.querySelector('h3').innerText.toLowerCase()
+      const normalizedSearch = search.toLowerCase()
+      item.style.display = 'block'
+
+      if(!todoTitle.includes(normalizedSearch)) {
+        item.style.display = 'none'
+      }
+
+    })
+  }
+
 // EVENTOS
 
 element.todo_form.addEventListener('submit', (event) => {
@@ -215,6 +232,15 @@ element.edit_form.addEventListener('submit', (event) => {
   }
   toggleForms()
 })
+
+element.data_search_input.addEventListener('keyup', (event) => {
+
+  const search = event.target.value
+
+  getSearchTodos(search)
+})
+
+
 
 
 
