@@ -27,4 +27,6 @@ body {
 
 img {
     width: 18px;
+    pointer-events: none;
 }
+

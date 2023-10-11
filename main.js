@@ -62,16 +62,14 @@ systemDate()
 
     const btnFinish = createElement('button')
     btnFinish.classList.add('finish_todo');
-    btnFinish.setAttribute('title', 'realizar tarefa')
+    btnFinish.setAttribute('title', 'realizar tarefa');
+    btnFinish.setAttribute('data_finish_todo', '');
     
     const imgFinish = createElement('img')
     imgFinish.setAttribute('src', 'img/checked.png');
     imgFinish.setAttribute('alt', 'botão finalizado');
 
     btnFinish.appendChild(imgFinish)
-
-    // console.log(imgFinish)
-
     // btnFinish.innerHTML = '<img src="img/checked.png" alt="">'
 
     todo.appendChild(btnFinish)
@@ -80,6 +78,7 @@ systemDate()
     btnEdit.classList.add('edit_todo');
     btnEdit.innerHTML = '<img src="img/lapis.png" alt="">'
     btnEdit.setAttribute('title', 'Editar tarefa')
+    btnEdit.setAttribute('data_edit_todo', '');
 
     todo.appendChild(btnEdit)
 
@@ -87,11 +86,12 @@ systemDate()
     btnRemove.classList.add('remove_todo');
     btnRemove.innerHTML = '<img src="img/lixeira.png" alt="">'
     btnRemove.setAttribute('title', 'excluir tarefa')
+    btnRemove.setAttribute('data_remove_todo', '');
 
     todo.appendChild(btnRemove)
 
     element.todo_list.appendChild(todo)
-    // console.log(todo)
+
   }
 
 // EVENTOS
@@ -109,6 +109,27 @@ element.todo_form.addEventListener('submit', (event) => {
 
 })
 
+document.addEventListener('click', (event) => {
+
+  const targetElement = event.target;
+  const parentElement = targetElement.closest('div')
+
+  if(targetElement.getAttribute('data_finish_todo') === '') {
+
+  } 
+  if(targetElement.getAttribute('data_edit_todo') === '') {
+
+  }
+  if(targetElement.getAttribute('data_remove_todo') === '') {
+    const removeConfirm = window.confirm('Tem certeza que deseja excluir essa tarefa?')
+
+    if(removeConfirm) {
+      parentElement.remove()
+    }
+  }
+
+
+})
 
 
 
