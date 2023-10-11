@@ -3,8 +3,15 @@ const element = {
   todo_form: document.querySelector('[todo_form]'),
   todo_input: document.querySelector('[todo_input]'),
   todo_list: document.querySelector('[todo_list]'),
+  data_progress: document.querySelector('[data_progress]'),
+  data_cancel_edit : document.querySelector('[data_cancel_edit]'),
+  edit_form: document.querySelector('[edit_form]'),
+  edit_input: document.querySelector('[edit_input]'),
 }
-// console.log(element.todo_list)
+console.log(element.todo_form)
+
+let progress = 0;
+let oldInputValue;
 
 // FUNÇÕES
 
@@ -53,6 +60,7 @@ systemDate()
 
     const todo = createElement('div')
     todo.classList.add('todo');
+    todo.setAttribute('data_todo', '')
     // todo.classList.add('done');
 
     const todoTitle = createElement('h3')
@@ -91,7 +99,50 @@ systemDate()
     todo.appendChild(btnRemove)
 
     element.todo_list.appendChild(todo)
+    element.todo_input.value = '';
+    element.todo_input.focus();
 
+  }
+
+  function updateProgressBarr () {
+    element.data_progress.style.width = progress + '%'
+  }
+
+  function increaseProgressBarr () {
+    progress += 5
+
+    if(progress > 100) {
+      progress = 100
+    }
+
+    updateProgressBarr()
+  }
+
+  function decrementProgressBarr () {
+    progress -= 5
+
+    if(progress < 0) {
+      progress = 0
+    }
+
+    updateProgressBarr()
+  }
+
+  function toggleForms () {
+    element.edit_form.classList.toggle('hide');
+    element.todo_form.classList.toggle('hide');
+    element.todo_list.classList.toggle('hide');
+  }
+
+  function updateTodo (text) {
+    const todos = document.querySelectorAll('[data_todo]')
+
+    todos.forEach((item) => {
+      let todoTitle = item.querySelector('h3')
+
+      if(todoTitle.innerText === oldInputValue)
+        todoTitle.innerText = text
+    })
   }
 
 // EVENTOS
@@ -113,22 +164,56 @@ document.addEventListener('click', (event) => {
 
   const targetElement = event.target;
   const parentElement = targetElement.closest('div')
+  let todoTitle;
 
-  if(targetElement.getAttribute('data_finish_todo') === '') {
+  if(parentElement && parentElement.querySelector('h3')) {
+    todoTitle = parentElement.querySelector('h3').innerText
 
   } 
-  if(targetElement.getAttribute('data_edit_todo') === '') {
 
+  if(targetElement.getAttribute('data_finish_todo') === '') {
+    parentElement.classList.toggle('done')
+
+    if(parentElement.classList.contains('done')) {
+      increaseProgressBarr()
+    } else {
+      decrementProgressBarr()
+    }
+  } 
+
+  if(targetElement.getAttribute('data_edit_todo') === '') {
+    toggleForms()
+
+    element.edit_input.value = todoTitle
+    oldInputValue = todoTitle
   }
+
   if(targetElement.getAttribute('data_remove_todo') === '') {
     const removeConfirm = window.confirm('Tem certeza que deseja excluir essa tarefa?')
 
     if(removeConfirm) {
       parentElement.remove()
+      decrementProgressBarr()
     }
   }
 
+})
 
+element.data_cancel_edit.addEventListener('click', (event) => {
+  event.preventDefault()
+
+  toggleForms()
+})
+
+element.edit_form.addEventListener('submit', (event) => {
+  event.preventDefault()
+
+  const editInputValue = element.edit_input.value
+
+  if(editInputValue) {
+    updateTodo(editInputValue)
+  }
+  toggleForms()
 })
 
 

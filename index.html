@@ -34,8 +34,9 @@
 
         <!-- CONFIGURAÇÃO DA BARRA DE PROGRESSO -->
 
-            <div class="progressbar">
-                <progress max="100" value="40" 40%></progress>
+            <div class="progressbar" data_progressbar>
+                <div class="progress" data_progress>
+                </div>
             </div>
 
         <!-- CONFIGURAÇÃO DOS BOTÕES DE FILTROS -->
@@ -54,9 +55,19 @@
                 <button class="btn_add_task" title="Adicionar tarefa"><img src="img/adicao.png" alt=""></button>
             </form>
 
+        <!-- CONFIGURAÇÃO EDIÇÃO DE TAREFAS -->
+
+            <form class="container_edit_input hide" edit_form>
+                <input placeholder="Editar tarefa" maxlength="60" autofocus class="input_message" edit_input>
+                <button class="btn_add_task" title="Editar tarefa"><img src="img/adicao.png" alt=""></button>
+                <button data_cancel_edit>Cancelar</button>
+            </form>
+
+        <!-- CONFIGURAÇÃO TODOLIST -->
+
             <div id="todo_list" todo_list>
 
-                <div class="todo done">
+                <div class="todo done" data_todo>
                     <h3>Estou fazendo alguma coisa...</h3>
                     <button class="finish_todo" data_finish_todo><img src="img/checked.png" alt="">
                     </button>
@@ -66,7 +77,7 @@
                     </button>
                 </div>
     
-                <div class="todo">
+                <div class="todo" data_todo>
                     <h3>Estudar JavaCript</h3>
                     <button class="finish_todo"  data_finish_todo><img src="img/checked.png" alt="">
                     </button>
