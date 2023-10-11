@@ -15,6 +15,7 @@ const element = {
 
 let progress = 0;
 let oldInputValue;
+let saveProgress = Number(localStorage.getItem('progressBarr'))
 
 // FUNÇÕES
 
@@ -59,7 +60,7 @@ systemDate()
     return document.createElement(elementName)
   }
 
-  function saveTodo (text) {
+  function saveTodo (text, done = 0, save = 1) {
 
     const todo = createElement('div')
     todo.classList.add('todo');
@@ -101,6 +102,13 @@ systemDate()
 
     todo.appendChild(btnRemove)
 
+    if(done) {
+      todo.classList.add('done')
+    } 
+    if(save) {
+      saveTodoLS({text, done})
+    }
+
     element.todo_list.appendChild(todo)
     element.todo_input.value = '';
     element.todo_input.focus();
@@ -109,6 +117,13 @@ systemDate()
 
   function updateProgressBarr () {
     element.data_progress.style.width = progress + '%'
+    localStorage.setItem('progressBarr', progress)
+
+  }
+
+  if(saveProgress) {
+    progress = saveProgress
+    updateProgressBarr()
   }
 
   function increaseProgressBarr () {
@@ -161,6 +176,22 @@ systemDate()
       }
 
     })
+  }
+
+// LOCALSTORAGE
+
+  function getTodosLS () {
+    const todos = JSON.parse(localStorage.getItem('todos')) || [];
+    return todos;
+
+  }
+
+  function saveTodoLS (todo) {
+    const todos = getTodosLS()
+
+    todos.push(todo)
+
+    localStorage.setItem('todos', JSON.stringify(todos))
   }
 
 // EVENTOS
