@@ -9,6 +9,7 @@ const element = {
   edit_input: document.querySelector('[edit_input]'),
   data_search_input: document.querySelector('[data_search_input]'),
   erase_btn: document.querySelector('[erase_btn]'),
+  data_filter: document.querySelectorAll('[data_filter]'),
 }
 // console.log(element.erase_btn)
 
@@ -238,6 +239,52 @@ element.data_search_input.addEventListener('keyup', (event) => {
   const search = event.target.value
 
   getSearchTodos(search)
+})
+
+element.erase_btn.addEventListener('click', (event) => {
+  event.preventDefault()
+
+  element.data_search_input.value = ''
+
+  element.data_search_input.dispatchEvent(new Event('keyup'))
+})
+
+element.data_filter.forEach((elemento) => {
+
+  elemento.addEventListener('click', (event) => {
+    event.preventDefault()
+    const todos = document.querySelectorAll('[data_todo]')
+
+    switch (elemento.getAttribute('data_filter')) {
+      case 'all':
+          todos.forEach((todo) => {
+            todo.style.display = 'block'
+          })
+        break;
+
+      case 'finish':
+          todos.forEach((todo) => {
+
+            todo.classList.contains('done') 
+              ? todo.style.display = 'block' 
+              : todo.style.display = 'none'
+          })
+        break;
+
+      case 'pending':
+          todos.forEach((todo) => {
+
+            !todo.classList.contains('done')
+              ? todo.style.display = 'block' 
+              : todo.style.display = 'none'
+          })
+        break;
+
+      default:
+        break;
+    }
+  })
+
 })
 
 

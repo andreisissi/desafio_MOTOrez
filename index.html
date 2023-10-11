@@ -42,9 +42,10 @@
         <!-- CONFIGURAÇÃO DOS BOTÕES DE FILTROS -->
 
             <form class="btn_filter">
-                <button class="all_btn">Todas</button>
-                <button class="finish_btn"><img src="img/checked.png" alt="">Realizadas</button>
-                <button class="pending_btn"><img src="img/relogio.png" alt="">Pendentes</button>
+                <button type="button" class="all_btn" data_filter="all">Todas</button>
+                <button type="button" class="finish_btn" data_filter="finish"><img src="img/checked.png" alt="">Realizadas</button>
+                <button type="button" class="pending_btn" data_filter="pending"><img src="img/relogio.png" alt="">Pendentes</button>
+
                 <input class="search" type="text" placeholder="Buscar" data_search_input>
                 <button erase_btn>apagar</button>
             </form>
