@@ -194,6 +194,26 @@ systemDate()
     localStorage.setItem('todos', JSON.stringify(todos))
   }
 
+  function loadTodosLS () {
+    const todos = getTodosLS()
+
+    todos.forEach((todo) => {
+      saveTodo(todo.text, todo.done, 0)
+    })
+  }
+
+  // function removeTodo () {
+
+  // }
+
+  const removeTodoLS = (todoText) => {
+    const todos = getTodosLS()
+    const filterTodos = todos.filter((todo) => todo.text !== todoText)
+    localStorage.setItem('todos', JSON.stringify(filterTodos))
+  }
+
+  loadTodosLS()
+
 // EVENTOS
 
 element.todo_form.addEventListener('submit', (event) => {
@@ -243,6 +263,7 @@ document.addEventListener('click', (event) => {
     if(removeConfirm) {
       parentElement.remove()
       decrementProgressBarr()
+      removeTodoLS(todoTitle)
     }
   }
 
