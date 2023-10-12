@@ -11,7 +11,7 @@ const element = {
   erase_btn: document.querySelector('[erase_btn]'),
   data_filter: document.querySelectorAll('[data_filter]'),
 }
-// console.log(element.erase_btn)
+
 
 let progress = 0;
 let oldInputValue;
@@ -160,6 +160,7 @@ systemDate()
 
       if(todoTitle.innerText === oldInputValue)
         todoTitle.innerText = text
+        updateTodoLS(oldInputValue, text)
     })
   }
 
@@ -202,14 +203,30 @@ systemDate()
     })
   }
 
-  // function removeTodo () {
+  const updateTodoStatusLS = (todoText) => {
+    const todos = getTodosLS()
 
-  // }
+    todos.map((todo) => todo.text === todoText 
+      ? todo.done = !todo.done
+      : null
+      )
+      localStorage.setItem('todos', JSON.stringify(todos))
+  }
 
   const removeTodoLS = (todoText) => {
     const todos = getTodosLS()
     const filterTodos = todos.filter((todo) => todo.text !== todoText)
     localStorage.setItem('todos', JSON.stringify(filterTodos))
+  }
+
+  const updateTodoLS = (todoOldText, todoNewText) => {
+    const todos = getTodosLS()
+
+    todos.map((todo) => todo.text === todoOldText 
+      ? todo.text = todoNewText
+      : null
+    )
+    localStorage.setItem('todos', JSON.stringify(todos))
   }
 
   loadTodosLS()
@@ -243,6 +260,7 @@ document.addEventListener('click', (event) => {
   if(targetElement.getAttribute('data_finish_todo') === '') {
     parentElement.classList.toggle('done')
 
+    updateTodoStatusLS(todoTitle)
     if(parentElement.classList.contains('done')) {
       increaseProgressBarr()
     } else {
@@ -338,95 +356,3 @@ element.data_filter.forEach((elemento) => {
   })
 
 })
-
-
-
-
-
-// let dt = new Date();
-// let week = dt.getDay();
-// let day = dt.getDate();
-// let month = dt.getMonth();
-// let year = dt.getFullYear();
-
-
-// let arrayMonth = new Array('Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro');
-// let arrayWeek = new Array('Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado');
-
-// element.data_date.innerHTML = `${day} de ${arrayMonth[month]}`
-// element.data_year.innerHTML = year;
-// element.data_week.innerHTML = `${arrayWeek[week]}`
-
-
-
-// let input = document.querySelector('.input_message');
-// let list = document.querySelector('.ul_list');
-// let button = document.querySelector('.btn_add_task');
-// let taskDoneBtn = document.querySelector('.finish_btn');
-// let taskPendingbtn = document.querySelector('.pending_btn');
-// let search = document.querySelector('.search');
-
-// let toDo = [];
-
-// function inputTask () {
-//   const inputValue = input.value.trim();
-
-//   if(inputValue === ''){
-//     input.focus()
-//     return
-//   }
-
-//   toDo.push({
-//     task: input.value,
-//     done: false,
-//   })
-
-//   input.value = ''
-
-//   saveLi()
-// }
-
-// function saveLi () {
-
-//   let newList = '';
-
-//     toDo.forEach((item, index) => {
-
-//     newList = `<li class="task ${item.done && "done"}" >
-//                 <img src="./img/checked.png" alt="" onclick="completeTask(${index})">
-//                   <p>${item.task}</p>
-//                 <img src="./img/lixeira.png" alt="" onclick="deleteItem(${index})">
-//                </li>` + newList
-  
-//   })
-
-//   list.innerHTML = newList;
-//   localStorage.setItem('item', JSON.stringify(toDo))
-// }
-
-// function completeTask (index) {
-//   toDo[index].done = !toDo[index].done
-
-//   saveLi()
-// }
-
-// function deleteItem (index) {
-//   if(confirm("Tem certeza que deseja excluir essa tarefa?")){
-//   toDo.splice(index, 1)
-  
-//   saveLi()
-//   }
-// }
-
-// function refresh () {
-//   const indexLocalStorage = localStorage.getItem('item')
-
-//   if(indexLocalStorage){
-//     toDo = JSON.parse(indexLocalStorage)
-//   }
-
-//   saveLi()
-// }
-
-// refresh()
-// button.addEventListener('click', inputTask)
