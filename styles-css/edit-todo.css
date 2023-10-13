@@ -1,0 +1,53 @@
+.container_edit_input {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.input_edit {
+    width: 91%;
+    height: 60px;
+    padding-left: 20px;
+    font-size: 25px;
+    border-radius: 15px;
+    margin-right: 4px;
+    border: solid 1px gray;
+    outline-color: gray;
+}
+
+.btn_add_task {
+    width: 70px;
+    height: 60px;
+    background-color: white;
+    border-radius: 15px;
+    border: solid 1px gray;
+    justify-content: center;
+}
+
+.container_cancel {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.container_cancel button {
+    width: 150px;
+    height: 50px;
+    border:  solid 1px gray;
+    border-radius: 10px;
+    font-size: 25px;
+    background-color: white;
+}
+
+.container_cancel button:hover {
+    box-shadow: 3px 3px 5px gray;
+    transition: .3s ease-in-out;
+}
+
+.hide {
+    display: none;
+}

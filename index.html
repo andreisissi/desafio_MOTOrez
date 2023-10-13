@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="styles-css/input-btn-task.css">
     <link rel="stylesheet" href="styles-css/todo-list.css">
     <link rel="stylesheet" href="styles-css/media-querie.css">
+    <link rel="stylesheet" href="styles-css/edit-todo.css">
 
     <script type="text/Javascript" src="main.js" defer></script>
     <title>ToDo List</title>
@@ -62,9 +63,11 @@
         <!-- CONFIGURAÇÃO EDIÇÃO DE TAREFAS -->
 
             <form class="container_edit_input hide" edit_form>
-                <input placeholder="Editar tarefa" maxlength="60" autofocus class="input_message" edit_input>
-                <button class="btn_add_task" title="Editar tarefa"><img src="img/adicao.png" alt=""></button>
-                <button data_cancel_edit>Cancelar</button>
+                    <input placeholder="Editar tarefa" maxlength="60" autofocus class="input_edit" edit_input>
+                    <button class="btn_add_task" title="Editar tarefa"><img src="img/adicao.png" alt=""></button>
+                <div class="container_cancel">
+                    <button data_cancel_edit class="cancel_edit">Cancelar</button>
+                </div>
             </form>
 
         <!-- CONFIGURAÇÃO TODOLIST -->
