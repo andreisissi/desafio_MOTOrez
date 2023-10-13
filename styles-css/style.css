@@ -6,10 +6,15 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+html {
+    height: 100vh;
+}
+
 body {
     display: flex;
-    background-size: cover;
     background-image: url(/img/fundo.jpg);
+    background-position: center;
+    background-size: cover;
     font-size: 30px;
     outline: none;
 }

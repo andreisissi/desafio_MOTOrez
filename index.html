@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="styles-css/style.css">
     <link rel="stylesheet" href="styles-css/config-data.css">
     <link rel="stylesheet" href="styles-css/progress-barr.css">
-    <link rel="stylesheet" href="styles-css/btn-filter.css">
+    <link rel="stylesheet" href="styles-css/filter-search.css">
     <link rel="stylesheet" href="styles-css/input-btn-task.css">
-    <link rel="stylesheet" href="styles-css/task-list.css">
+    <link rel="stylesheet" href="styles-css/todo-list.css">
     <link rel="stylesheet" href="styles-css/media-querie.css">
 
     <script type="text/Javascript" src="main.js" defer></script>
@@ -26,7 +26,7 @@
 
         <div class="date">
             <div class="date-year">
-                <p data_date="day_month">data e mes</p>
+                <p data_date="day_month" class="day_month">data e mes</p>
                 <p class="year" data_date="year">ano</p>
             </div>
             <p class="week" data_date="week">semana</p>
@@ -39,15 +39,17 @@
                 </div>
             </div>
 
-        <!-- CONFIGURAÇÃO DOS BOTÕES DE FILTROS -->
+        <!-- CONFIGURAÇÃO DOS BOTÕES DE FILTROS E BARRA DE PESQUISA-->
 
-            <form class="btn_filter">
-                <button type="button" class="all_btn" data_filter="all">Todas</button>
-                <button type="button" class="finish_btn" data_filter="finish"><img src="img/checked.png" alt="">Realizadas</button>
-                <button type="button" class="pending_btn" data_filter="pending"><img src="img/relogio.png" alt="">Pendentes</button>
+            <form class="filter_search">
+                    <button type="button" class="all_btn" data_filter="all"><img src="img/lista.png" alt="">Todas</button>
+                    <button type="button" class="finish_btn" data_filter="finish"><img src="img/checked.png" alt="">Realizadas</button>
+                    <button type="button" class="pending_btn" data_filter="pending"><img src="img/relogio.png" alt="">Pendentes</button>
 
-                <input class="search" type="text" placeholder="Buscar" data_search_input>
-                <button erase_btn>apagar</button>
+                <div class="search_task">
+                    <input class="search" type="text" placeholder="Buscar" data_search_input>
+                    <button erase_btn title="Apagar" class="btn_search"><img src="img/seta.png" alt=""></button>
+                </div>
             </form>
 
         <!-- CONFIGURAÇÃO DO INPUT E BOTÃO DE ADD TAREFAS -->
