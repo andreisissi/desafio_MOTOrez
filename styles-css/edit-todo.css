@@ -15,16 +15,26 @@
     border-radius: 15px;
     margin-right: 4px;
     border: solid 1px gray;
-    outline-color: gray;
+    outline: none;
+    box-shadow: 2px 2px 3px gray;
 }
 
-.btn_add_task {
+.btn_add_task_edit {
     width: 70px;
     height: 60px;
     background-color: white;
     border-radius: 15px;
     border: solid 1px gray;
     justify-content: center;
+}
+
+.btn_add_task_edit:hover {
+    box-shadow: inset 2px 2px 3px gray;
+    transition: .3s ease-in-out;
+}
+
+.btn_add_task_edit img {
+    width: 65px;
 }
 
 .container_cancel {
@@ -41,13 +51,38 @@
     border-radius: 10px;
     font-size: 25px;
     background-color: white;
+    box-shadow: 1px 1px 3px gray;
 }
 
 .container_cancel button:hover {
-    box-shadow: 3px 3px 5px gray;
+    box-shadow: inset 2px 2px 3px gray;
     transition: .3s ease-in-out;
 }
 
 .hide {
     display: none;
+}
+
+@media screen and (max-width: 320px) {
+
+    .input_edit {
+        width: 80%;
+        height: 40px;
+        font-size: 5vw;
+    }
+
+    .btn_add_task_edit {
+        width: 40px;
+        height: 40px;
+    }
+
+    .btn_add_task_edit img {
+        width: 40px;
+    }
+
+    .container_cancel button {
+        width: 80px;
+        height: 30px;
+        font-size: 4vw;
+    }
 }

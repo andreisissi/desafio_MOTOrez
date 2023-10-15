@@ -4,14 +4,14 @@
 }
 
 .day_month {
-    font-size: 50px;
+    font-size: 2vw;
 }
 
 .year {
-    font-size: 30px;
+    font-size: 1vw;
 }
 
 .week {
-    font-size: 50px;
+    font-size: 2vw;
     margin-top: 10px;
 }

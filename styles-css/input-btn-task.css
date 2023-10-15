@@ -1,5 +1,6 @@
 .container_btn_input {
     width: 90%;
+    height: 60px;
     display: flex;
     margin-bottom: 20px;
     margin-left: auto;
@@ -8,26 +9,28 @@
 
 .input_message {
     width: 100%;
-    height: 60px;
+    height: 100%;
     padding-left: 20px;
-    font-size: 25px;
+    font-size: 1vw;
     border-radius: 15px;
     margin-right: 5px;
     border: solid 1px gray;
-    outline-color: gray;
+    box-shadow: 2px 2px 3px gray;
+    outline: none;
 }
 
 .btn_add_task {
     width: 80px;
-    height: 60px;
+    height: 100%;
     background-color: white;
     border-radius: 15px;
     border: solid 1px gray;
+    box-shadow: 1px 1px 3px gray;
     justify-content: center;
 }
 
 .btn_add_task:hover {
-    box-shadow: 3px 3px 5px gray;
+    box-shadow: inset 2px 2px 3px gray;
     transition: .3s ease-in-out;
 }
 
@@ -38,3 +41,4 @@
 .hide {
     display: none;
 }
+

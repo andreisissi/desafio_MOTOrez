@@ -1,64 +1,90 @@
-@media screen and (max-width: 1781px) {
-    
-    .search {
-        height: 40px;
+@media screen and (max-width: 320px) {
+
+    .container {
         width: 100%;
-        margin: 15px 0 0;
+        padding: 1rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
     }
 
-    .container {
-        width: 40%;
-        margin-top: 10rem;
-        margin-left: auto;
-        margin-right: auto;
+    .day_month, .week {
+        font-size: 6vw;
     }
-
-}
-
-@media screen and (max-width: 1360px) {
     
-    .date {
-        display: flex;
-        justify-content: space-between;
+    .year {
+        font-size: 5vw;
     }
 
-    .container {
-        width: 60%;
-        margin-top: 5rem;
-        margin-bottom: 5rem;
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-@media screen and (max-width: 830px) {
-    
-    .date {
-        display: flex;
-        justify-content: space-between;
-        font-size: 20px;
+    .progressbar, .progress {
+        height: 25px;
     }
 
-    .container {
+    .filter_search {
+        padding: 1rem;
+        margin-bottom: 20px;
+    }
+
+    .finish_btn, .pending_btn, .all_btn {
         width: 80%;
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-        margin-left: auto;
-        margin-right: auto;
+        margin-bottom: 10px;
+        font-size: 5vw;
     }
-}
 
-@media screen and (max-width: 520px) {
+    .search {
+        height: 80%;
+        padding-left: 20px;
+        font-size: 5vw;
+
+    }
+
+    .btn_search {
+        width: 25px;
+        height: 80%;
+    }
+
+    .btn_search img {
+        width: 15px;
+        margin-left: 10px;
+    }
+
+    .container_btn_input {
+        height: 40px;
+        margin-bottom: 10px;
+    }
+
+    .input_message {
+        height: 40px;
+        font-size: 5vw;
+    }
+
+    .btn_add_task {
+        width: 40px;
+        height: 40px;
+    }
+
+    .btn_add_task img {
+        width: 40px;
+    }
+
+    .todo {
+        height: 40px;
+        padding: 2px;
+        margin-bottom: 5px;
+    }
     
-    .date {
-        display: flex;
-        justify-content: space-between;
-        font-size: 20px;
+    .todo h3 {
+        margin-left: 10px;
+        font-size: 5vw;
+    }
+    
+    .todo img {
+        width: 4vw;
     }
 
-    .container {
-        width: 100%;
-        margin-top: 2rem;
-        margin-bottom: 2rem;
+    .todo button {
+        width: 30px;
+        height: 25px;
+        margin-right: 5px;
     }
+
 }

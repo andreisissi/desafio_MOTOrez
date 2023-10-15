@@ -170,7 +170,7 @@ systemDate()
     todos.forEach((item) => {
       let todoTitle = item.querySelector('h3').innerText.toLowerCase()
       const normalizedSearch = search.toLowerCase()
-      item.style.display = 'block'
+      item.style.display = 'flex'
 
       if(!todoTitle.includes(normalizedSearch)) {
         item.style.display = 'none'
@@ -184,7 +184,6 @@ systemDate()
   function getTodosLS () {
     const todos = JSON.parse(localStorage.getItem('todos')) || [];
     return todos;
-
   }
 
   function saveTodoLS (todo) {
@@ -328,7 +327,7 @@ element.data_filter.forEach((elemento) => {
     switch (elemento.getAttribute('data_filter')) {
       case 'all':
           todos.forEach((todo) => {
-            todo.style.display = 'block'
+            todo.style.display = 'flex'
           })
         break;
 
@@ -336,7 +335,7 @@ element.data_filter.forEach((elemento) => {
           todos.forEach((todo) => {
 
             todo.classList.contains('done') 
-              ? todo.style.display = 'block' 
+              ? todo.style.display = 'flex' 
               : todo.style.display = 'none'
           })
         break;
@@ -345,7 +344,7 @@ element.data_filter.forEach((elemento) => {
           todos.forEach((todo) => {
 
             !todo.classList.contains('done')
-              ? todo.style.display = 'block' 
+              ? todo.style.display = 'flex' 
               : todo.style.display = 'none'
           })
         break;

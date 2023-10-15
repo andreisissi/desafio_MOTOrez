@@ -14,6 +14,7 @@
 .filter_search button {
     display: flex;
     align-items: center;
+    padding: 1%;
 }
 
 .filter_search button img {
@@ -21,46 +22,49 @@
 }
 
 .finish_btn, .pending_btn, .all_btn {
-    width: 15rem;
-    height: 50px;
+    width: 30%;
     background-color: white;
     border: solid 1px gray;
+    box-shadow: 1px 1px 3px gray;
     border-radius: 15px;
     cursor: pointer;
-    font-size: 25px;
+    font-size: 1vw;
     justify-content: center;
     margin-bottom: 40px;
 }
 
 .finish_btn:hover, .pending_btn:hover, .all_btn:hover {
-    box-shadow: 3px 3px 5px gray;
+    box-shadow: inset 2px 2px 3px gray;
     transition: .3s ease-in-out;
 }
 
 .search_task {
     width: 100%;
+    height: 50px;
     display: flex;
     justify-content: center;
 }
 
 .search {
-    width: 60%;
-    height: 50px;
+    width: 85%;
+    height: 100%;
     border-radius: 15px;
     border: solid 1px gray;
     text-align: left;
     padding-left: 40px;
-    font-size: 25px;
+    font-size: 1vw;
     margin-right: 5px;
-    outline-color: gray;
+    outline: none;
+    box-shadow: 2px 2px 3px gray;
 }
 
 .btn_search {
     width: 70px;
-    height: 50px;
+    height: 100%;
     background-color: white;
     border-radius: 15px;
     border: solid 1px gray;
+    box-shadow: 1px 1px 3px gray;
     justify-content: center;
 }
 
@@ -70,6 +74,6 @@
 }
 
 .btn_search:hover {
-    box-shadow: 3px 3px 5px gray;
+    box-shadow: inset 2px 2px 3px gray;
     transition: .3s ease-in-out;
 }

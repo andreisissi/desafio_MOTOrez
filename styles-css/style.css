@@ -11,9 +11,9 @@ html {
 }
 
 body {
+    width: 100%;
     display: flex;
     background-image: url(/img/fundo.jpg);
-    background-position: center;
     background-size: cover;
     font-size: 30px;
     outline: none;
@@ -24,7 +24,8 @@ body {
     width: 40%;
     border-radius: 5px;
     padding: 3rem;
-    margin-top: 10rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
     margin-left: auto;
     margin-right: auto;
     box-shadow: 2px 2px 8px 2px gray ;
