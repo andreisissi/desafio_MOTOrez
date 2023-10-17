@@ -1,69 +1,60 @@
-@media screen and (max-width: 320px) {
-
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    
     .container {
-        width: 100%;
         padding: 1rem;
-        margin-top: 0.5rem;
-        margin-bottom: 0.5rem;
     }
 
     .day_month, .week {
-        font-size: 6vw;
-    }
-    
-    .year {
         font-size: 5vw;
     }
 
-    .progressbar, .progress {
+    .year {
+        font-size: 4vw;
+    }
+
+    .progressbar {
         height: 25px;
+        margin: 4% 0 4% 0;
     }
 
     .filter_search {
         padding: 1rem;
-        margin-bottom: 20px;
     }
 
     .finish_btn, .pending_btn, .all_btn {
-        width: 80%;
+        width: 70%;
+        font-size: 4vw;
         margin-bottom: 10px;
-        font-size: 5vw;
     }
 
     .search {
+        width: 100%;
         height: 80%;
         padding-left: 20px;
-        font-size: 5vw;
-
+        font-size: 4vw;
     }
 
     .btn_search {
-        width: 25px;
+        width: 40px;
         height: 80%;
     }
-
+    
     .btn_search img {
         width: 15px;
-        margin-left: 10px;
-    }
-
-    .container_btn_input {
-        height: 40px;
-        margin-bottom: 10px;
     }
 
     .input_message {
-        height: 40px;
-        font-size: 5vw;
+        height: 80%;
+        font-size: 4vw;
     }
 
     .btn_add_task {
         width: 40px;
-        height: 40px;
+        height: 80%;
     }
 
     .btn_add_task img {
-        width: 40px;
+        width: 35px;
     }
 
     .todo {
@@ -71,20 +62,182 @@
         padding: 2px;
         margin-bottom: 5px;
     }
-    
+
     .todo h3 {
         margin-left: 10px;
-        font-size: 5vw;
-    }
-    
-    .todo img {
-        width: 4vw;
+        font-size: 4vw;
     }
 
     .todo button {
-        width: 30px;
+        width: 25px;
         height: 25px;
         margin-right: 5px;
     }
 
+    .todo img {
+        width: 18px;
+    }
+
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+    .container {
+        padding: 1.5rem;
+    }
+
+    .day_month, .week {
+        font-size: 4vw;
+    }
+
+    .year {
+        font-size: 3vw;
+    }
+
+    .progressbar {
+        height: 30px;
+        margin: 4% 0 4% 0;
+    }
+
+    .filter_search {
+        padding: 2rem;
+    }
+
+    .finish_btn, .pending_btn, .all_btn {
+        width: 60%;
+        font-size: 3vw;
+        margin-bottom: 10px;
+    }
+
+    .search {
+        width: 100%;
+        height: 80%;
+        padding-left: 20px;
+        font-size: 3vw;
+    }
+
+    .btn_search {
+        width: 40px;
+        height: 80%;
+    }
+    
+    .btn_search img {
+        width: 15px;
+    }
+
+    .input_message {
+        height: 80%;
+        font-size: 3vw;
+    }
+
+    .btn_add_task {
+        width: 40px;
+        height: 80%;
+    }
+
+    .btn_add_task img {
+        width: 35px;
+    }
+
+    .todo {
+        height: 45px;
+        padding: 5px;
+        margin-bottom: 5px;
+    }
+
+    .todo h3 {
+        margin-left: 10px;
+        font-size: 3vw;
+    }
+
+    .todo button {
+        width: 25px;
+        height: 25px;
+        margin-right: 5px;
+    }
+
+    .todo img {
+        width: 18px;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+    .container {
+        padding: 3rem;
+    }
+
+    .day_month, .week {
+        font-size: 3vw;
+    }
+
+    .year {
+        font-size: 2vw;
+    }
+
+    .progressbar {
+        height: 40px;
+        margin: 4% 0 4% 0;
+    }
+
+    .filter_search {
+        padding: 2rem;
+    }
+
+    .finish_btn, .pending_btn, .all_btn {
+        width: 30%;
+        font-size: 2vw;
+        margin-bottom: 30px;
+    }
+
+    .search {
+        width: 85%;
+        height: 80%;
+        padding-left: 20px;
+        font-size: 2vw;
+    }
+
+    .btn_search {
+        width: 40px;
+        height: 80%;
+    }
+    
+    .btn_search img {
+        width: 15px;
+    }
+
+    .input_message {
+        height: 80%;
+        font-size: 2vw;
+    }
+
+    .btn_add_task {
+        width: 40px;
+        height: 80%;
+    }
+
+    .btn_add_task img {
+        width: 35px;
+    }
+
+    .todo {
+        height: 45px;
+        padding: 5px;
+        margin-bottom: 15px;
+    }
+
+    .todo h3 {
+        margin-left: 10px;
+        font-size: 2vw;
+    }
+
+    .todo button {
+        width: 25px;
+        height: 25px;
+        margin-right: 5px;
+    }
+
+    .todo img {
+        width: 18px;
+    }
 }

@@ -88,7 +88,7 @@ systemDate()
 
     const btnEdit = createElement('button')
     btnEdit.classList.add('edit_todo');
-    btnEdit.innerHTML = '<img src=".assets/img/lapis.png" alt="">'
+    btnEdit.innerHTML = '<img src="assets/img/lapis.png" alt="">'
     btnEdit.setAttribute('title', 'Editar tarefa')
     btnEdit.setAttribute('data_edit_todo', '');
 
@@ -96,7 +96,7 @@ systemDate()
 
     const btnRemove = createElement('button')
     btnRemove.classList.add('remove_todo');
-    btnRemove.innerHTML = '<img src=".assets/img/lixeira.png" alt="">'
+    btnRemove.innerHTML = '<img src="assets/img/lixeira.png" alt="">'
     btnRemove.setAttribute('title', 'excluir tarefa')
     btnRemove.setAttribute('data_remove_todo', '');
 

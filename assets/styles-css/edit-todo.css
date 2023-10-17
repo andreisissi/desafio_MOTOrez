@@ -8,10 +8,10 @@
 }
 
 .input_edit {
-    width: 91%;
+    width: 85%;
     height: 60px;
     padding-left: 20px;
-    font-size: 25px;
+    font-size: 1vw;
     border-radius: 15px;
     margin-right: 4px;
     border: solid 1px gray;
@@ -26,6 +26,7 @@
     border-radius: 15px;
     border: solid 1px gray;
     justify-content: center;
+    box-shadow: 1px 1px 3px gray;
 }
 
 .btn_add_task_edit:hover {
@@ -49,7 +50,7 @@
     height: 50px;
     border:  solid 1px gray;
     border-radius: 10px;
-    font-size: 25px;
+    font-size: 1vw;
     background-color: white;
     box-shadow: 1px 1px 3px gray;
 }
@@ -63,12 +64,12 @@
     display: none;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 320px) and (max-width: 480px) {
 
     .input_edit {
         width: 80%;
         height: 40px;
-        font-size: 5vw;
+        font-size: 4vw;
     }
 
     .btn_add_task_edit {
@@ -81,8 +82,56 @@
     }
 
     .container_cancel button {
-        width: 80px;
+        width: 30%;
         height: 30px;
-        font-size: 4vw;
+        font-size: 3vw;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+    .input_edit {
+        width: 85%;
+        height: 40px;
+        font-size: 3vw;
+    }
+
+    .btn_add_task_edit {
+        width: 40px;
+        height: 40px;
+    }
+
+    .btn_add_task_edit img {
+        width: 40px;
+    }
+
+    .container_cancel button {
+        width: 30%;
+        height: 30px;
+        font-size: 3vw;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+    .input_edit {
+        width: 90%;
+        height: 40px;
+        font-size: 2vw;
+    }
+
+    .btn_add_task_edit {
+        width: 45px;
+        height: 40px;
+    }
+
+    .btn_add_task_edit img {
+        width: 40px;
+    }
+
+    .container_cancel button {
+        width: 30%;
+        height: 40px;
+        font-size: 2vw;
     }
 }
