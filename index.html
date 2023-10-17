@@ -7,16 +7,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="styles-css/style.css">
-    <link rel="stylesheet" href="styles-css/config-data.css">
-    <link rel="stylesheet" href="styles-css/progress-barr.css">
-    <link rel="stylesheet" href="styles-css/filter-search.css">
-    <link rel="stylesheet" href="styles-css/input-btn-task.css">
-    <link rel="stylesheet" href="styles-css/todo-list.css">
-    <link rel="stylesheet" href="styles-css/media-querie.css">
-    <link rel="stylesheet" href="styles-css/edit-todo.css">
+    <link rel="stylesheet" href="./assets/styles-css/style.css">
+    <link rel="stylesheet" href="./assets/styles-css/config-data.css">
+    <link rel="stylesheet" href="./assets/styles-css/progress-barr.css">
+    <link rel="stylesheet" href="./assets/styles-css/filter-search.css">
+    <link rel="stylesheet" href="./assets/styles-css/input-btn-task.css">
+    <link rel="stylesheet" href="./assets/styles-css/todo-list.css">
+    <link rel="stylesheet" href="./assets/styles-css/media-querie.css">
+    <link rel="stylesheet" href="./assets/styles-css/edit-todo.css">
 
-    <script type="text/Javascript" src="main.js" defer></script>
+    <script type="text/Javascript" src="./main.js" defer></script>
+
     <title>ToDo List</title>
 </head>
 <body>
@@ -43,13 +44,13 @@
         <!-- CONFIGURAÇÃO DOS BOTÕES DE FILTROS E BARRA DE PESQUISA-->
 
             <form class="filter_search">
-                    <button type="button" class="all_btn" data_filter="all"><img src="img/lista.png" alt="">Todas</button>
-                    <button type="button" class="finish_btn" data_filter="finish"><img src="img/checked.png" alt="">Realizadas</button>
-                    <button type="button" class="pending_btn" data_filter="pending"><img src="img/relogio.png" alt="">Pendentes</button>
+                    <button type="button" class="all_btn" data_filter="all"><img src="./assets/img/lista.png" alt="">Todas</button>
+                    <button type="button" class="finish_btn" data_filter="finish"><img src="./assets/img/checked.png" alt="">Realizadas</button>
+                    <button type="button" class="pending_btn" data_filter="pending"><img src="./assets/img/relogio.png" alt="">Pendentes</button>
 
                 <div class="search_task">
                     <input class="search" type="text" placeholder="Buscar" data_search_input>
-                    <button erase_btn title="Apagar" class="btn_search"><img src="img/seta.png" alt=""></button>
+                    <button erase_btn title="Apagar" class="btn_search"><img src="./assets/img/seta.png" alt=""></button>
                 </div>
             </form>
 
@@ -57,14 +58,14 @@
             
             <form class="container_btn_input" todo_form>
                 <input placeholder="adicionar tarefa" maxlength="60" autofocus class="input_message" todo_input>
-                <button class="btn_add_task" title="Adicionar tarefa"><img src="img/adicao.png" alt=""></button>
+                <button class="btn_add_task" title="Adicionar tarefa"><img src="./assets/img/adicao.png" alt=""></button>
             </form>
 
         <!-- CONFIGURAÇÃO EDIÇÃO DE TAREFAS -->
 
             <form class="container_edit_input hide" edit_form>
                     <input placeholder="Editar tarefa" maxlength="60" autofocus class="input_edit" edit_input>
-                    <button class="btn_add_task_edit" title="Editar tarefa"><img src="img/adicao.png" alt=""></button>
+                    <button class="btn_add_task_edit" title="Editar tarefa"><img src="./assets/img/adicao.png" alt=""></button>
                 <div class="container_cancel">
                     <button data_cancel_edit class="cancel_edit">Cancelar</button>
                 </div>

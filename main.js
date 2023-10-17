@@ -78,7 +78,7 @@ systemDate()
     btnFinish.setAttribute('data_finish_todo', '');
     
     const imgFinish = createElement('img')
-    imgFinish.setAttribute('src', 'img/checked.png');
+    imgFinish.setAttribute('src', './assets/img/checked.png');
     imgFinish.setAttribute('alt', 'botão finalizado');
 
     btnFinish.appendChild(imgFinish)
@@ -88,7 +88,7 @@ systemDate()
 
     const btnEdit = createElement('button')
     btnEdit.classList.add('edit_todo');
-    btnEdit.innerHTML = '<img src="img/lapis.png" alt="">'
+    btnEdit.innerHTML = '<img src=".assets/img/lapis.png" alt="">'
     btnEdit.setAttribute('title', 'Editar tarefa')
     btnEdit.setAttribute('data_edit_todo', '');
 
@@ -96,7 +96,7 @@ systemDate()
 
     const btnRemove = createElement('button')
     btnRemove.classList.add('remove_todo');
-    btnRemove.innerHTML = '<img src="img/lixeira.png" alt="">'
+    btnRemove.innerHTML = '<img src=".assets/img/lixeira.png" alt="">'
     btnRemove.setAttribute('title', 'excluir tarefa')
     btnRemove.setAttribute('data_remove_todo', '');
 

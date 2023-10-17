@@ -13,7 +13,7 @@ html {
 body {
     width: 100%;
     display: flex;
-    background-image: url(/img/fundo.jpg);
+    background-image: url(../img/fundo.jpg);
     background-size: cover;
     font-size: 30px;
     outline: none;
