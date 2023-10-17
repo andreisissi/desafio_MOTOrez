@@ -240,7 +240,7 @@ element.todo_form.addEventListener('submit', (event) => {
   if(inputValue && inputValue.length <= 60) {
     saveTodo(inputValue)
   } else {
-    alert('Campo vazio ou quantidade de caracteres exedido')
+    alert('Campo vazio ou quantidade de caracteres excedido')
   }
 
 })
