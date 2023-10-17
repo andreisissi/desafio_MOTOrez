@@ -9,7 +9,7 @@
 
 .input_edit {
     width: 85%;
-    height: 60px;
+    height: 50px;
     padding-left: 20px;
     font-size: 1vw;
     border-radius: 15px;
@@ -20,8 +20,8 @@
 }
 
 .btn_add_task_edit {
-    width: 70px;
-    height: 60px;
+    width: 60px;
+    height: 50px;
     background-color: white;
     border-radius: 15px;
     border: solid 1px gray;
@@ -35,7 +35,7 @@
 }
 
 .btn_add_task_edit img {
-    width: 65px;
+    width: 55px;
 }
 
 .container_cancel {
@@ -47,7 +47,7 @@
 
 .container_cancel button {
     width: 150px;
-    height: 50px;
+    height: 40px;
     border:  solid 1px gray;
     border-radius: 10px;
     font-size: 1vw;

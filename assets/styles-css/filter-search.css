@@ -47,7 +47,7 @@
 
 .search {
     width: 85%;
-    height: 100%;
+    height: 85%;
     border-radius: 15px;
     border: solid 1px gray;
     text-align: left;
@@ -59,8 +59,8 @@
 }
 
 .btn_search {
-    width: 70px;
-    height: 100%;
+    width: 60px;
+    height: 85%;
     background-color: white;
     border-radius: 15px;
     border: solid 1px gray;
@@ -69,7 +69,7 @@
 }
 
 .btn_search img {
-    width: 25px;
+    width: 15px;
     margin-left: 10px;
 }
 

@@ -9,7 +9,7 @@
 
 .input_message {
     width: 100%;
-    height: 100%;
+    height: 80%;
     padding-left: 20px;
     font-size: 1vw;
     border-radius: 15px;
@@ -20,8 +20,8 @@
 }
 
 .btn_add_task {
-    width: 80px;
-    height: 100%;
+    width: 60px;
+    height: 80%;
     background-color: white;
     border-radius: 15px;
     border: solid 1px gray;
@@ -35,7 +35,7 @@
 }
 
 .btn_add_task img {
-    width: 65px;
+    width: 45px;
 }
 
 .hide {
